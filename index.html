@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+       
+        <div class="header">
+        <h1>Cruds</h1>
+        <h3>Product Management System</h3>
+            </div>
+
+            <input class="in" id="title" type="text" placeholder="title">
+
+            
+                <input onkeyup="getTotal()" id="price" class="ins" type="number" placeholder="price">
+                <input onkeyup="getTotal()" id="tax" class="ins" type="number" placeholder="taxes">
+                <input onkeyup="getTotal()" id="ads" class="ins" type="number" placeholder="ads">
+                <input onkeyup="getTotal()" id="discount" class="ins" type="number" placeholder="discount">
+                <small onkeyup="getTotal()" class="ins" id="total"></small>
+       
+                <input class="in" id="count" type="number" placeholder="Count">
+                <input class="in" id="category" type="text" placeholder="Category">
+                <button id="btn">Create</button>
+                <input onkeyup="searchData(this.value)" id="sea" class="in" type="text" placeholder="Search">
+
+                <div class="flex">
+                    <button onclick="getsearchMode(this.id)" class="btn2" id="searchtitle">Search By Title</button>
+                    <button onclick="getsearchMode(this.id)" class="btn2" id="searchcategory">Search By Category</button>
+                </div>
+
+                <div >
+                    <button id="deleteicon"  onclick="deleteItems()"  style="margin: 20px 0;">Delete All</button>
+                </div>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>PRICE</th>
+                        <th>TAXES</th>
+                        <th>ADS</th>
+                        <th>DISCOUNT</th>
+                        <th>TOTAL</th>
+                        <th>CATEGORY</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                    </tr>
+
+                    <tbody id="tbody">
+                   
+                      
+                        
+                    
+                </tbody>
+
+
+
+                </table>
+
+    </div>
+ 
+    
+    <script src="main.js"></script>
+</body>
+</html>
